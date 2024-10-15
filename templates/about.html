@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest On Sneak Peek</title>
+    <link rel="icon" href="{{ url_for('static', filename='Images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/latest.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Existing CSS here */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/home"><img src="/static/Images/1.png" alt="Logo"></a>
+            <!-- Replace with the path to your logo image -->
+        </div>
+        <div class="navbar-center">
+            <div class="navbar-links">
+                <a href="/latest">Latest</a>
+                <a href="/home">Home</a>
+                <a href="/blogs">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <h1>About Us</h1>
+</div>
+
+<section class="article">
+    <div class="content">
+        <h2>Meet Sneak Peek: Bangalore's Hottest New Newsletter Service!</h2>
+        <p id="details">25th August 2024 | 5 min read</p>
+        <p>Hey there! Ever wondered where all the cool places in Bangalore are hiding? Well, wonder no more! Sneak Peek
+            is your brand-new go-to guide for discovering the trendiest spots in town, and it's brought to you by none
+            other than your friendly neighborhood high school student. Yes, you heard that right—this epic newsletter
+            service and blog was started as a fun project from the comfort of my living room!</p>
+        <img src="/static/Images/2.jpg" alt="Sneak Peek Blog Image">
+
+        <h2>How Did Sneak Peek Come to Life?</h2>
+        <p>So, picture this: A high school student, bored out of his mind on a lazy summer day, decides to turn his
+            passion for exploring into something productive. And voilà! Sneak Peek was born. I wanted to create
+            something that not only kept me busy but also helped people get out and about, enjoying life to the fullest.
+            After all, life is too short to be stuck at home, right?</p>
+        <p>And guess what? Sneak Peek isn't just any old newsletter. It’s a fully automated system that updates you with
+            the latest and greatest places to check out in Bangalore. From quirky cafes to must-visit hangouts, we’ve
+            got it all covered. All you need to do is sit back, relax, and wait for the best of Bangalore to come to
+            you!</p>
+        <p>But wait, there’s more! We’re not just about listing places; we're here to add a little excitement to your
+            day. Think of us as your personal guide to discovering new spots, without having to spend hours scrolling
+            through endless reviews. Plus, we add a sprinkle of humor and a dash of charm to keep things interesting.
+            Because who says finding new places has to be boring?</p>
+        <img src="/static/Images/Banner.png" alt="Sneak Peek Blog Image">
+
+        <h2>Why Sneak Peek Rocks</h2>
+        <p>Let’s be honest: nobody wants to spend hours searching for the coolest new places. That’s why we’ve made it
+            super easy for you. Our automated system does all the heavy lifting, so you don’t have to. We gather all the
+            buzz-worthy spots, filter out the fluff, and deliver only the best straight to your inbox.</p>
+        <p>So, if you’re ready to explore Bangalore like never before, and have a few laughs along the way, Sneak Peek
+            is here for you. Get ready to discover the city’s hidden gems and make every day an adventure. And remember,
+            all this started with a high school student’s quest for some summer fun—proving that even the smallest ideas
+            can turn into something pretty awesome!</p>
+    </div>
+</section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // GSAP animations
+        gsap.from('.navbar', { opacity: 0, y: -50, duration: 1, ease: 'power3.out' });
+        gsap.from('.container', { opacity: 0, y: 30, duration: 1, delay: 0.5, ease: 'power3.out' });
+        gsap.from('.article', { opacity: 0, y: 30, duration: 1, delay: 1, ease: 'power3.out' });
+        gsap.from('.article img', { opacity: 0, scale: 1.1, duration: 1, delay: 1.5, ease: 'power3.out' });
+    });
+</script>
+
+</html>

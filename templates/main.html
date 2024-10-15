@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Sneak Peek</title>
+    <link rel="icon" href="{{ url_for('static', filename='Images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                // GSAP animation for fade-in
+                gsap.fromTo('.container',
+                    { opacity: 0 },
+                    { opacity: 1, duration: 2, stagger: 0.5 }
+                );
+            });
+    </script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch('/subscribe', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const messageDiv = document.getElementById('message');
+                    const newsletterDiv = document.querySelector('.newsletter');
+                    const h1Tag = newsletterDiv.querySelector('h1');
+
+                    if (data.message.includes('Thank you')) {
+                        h1Tag.textContent = 'Hello Subscriber!';
+                        h1Tag.style.color = '#4caf50';
+                        newsletterDiv.style.backgroundColor = '#e0ffe0';
+                        newsletterDiv.style.color = '#4caf50';
+
+                        const emailInput = document.getElementById('email');
+                        const submitButton = newsletterDiv.querySelector('button');
+                        emailInput.style.display = 'none';
+                        submitButton.style.display = 'none';
+
+                        messageDiv.textContent = 'Welcome to the Squad! Get ready for your weekly dose of Bangalore’s buzz, delivered fresh to your inbox every Thursday. From the hottest spots to the coolest events, we’ve got your social calendar covered. Stay tuned, and let’s keep exploring the city together!';
+                        messageDiv.style.color = '#4caf50';
+                        messageDiv.style.textAlign = 'left';
+                    } else {
+                        messageDiv.textContent = data.message;
+                        messageDiv.style.color = 'red';
+                    }
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container" id="top">
+        <img src="/static/Images/1.png" alt="Logo" class="logo">
+        <img src="/static/Images/gif3.webp" alt="" class="logo">
+        <p class="co" >12.9716°N, 77.5946°E</p>
+        <!-- Restaurant and Event Themed SVG Elements -->
+        <div class="intro">
+            <h1 class=" highlight-border welcome">Peek-a-Boo! Bangalore</h1>
+            
+            <p class="desc">Welcome to Sneak Peek, where we’ve got the hottest gossip on Bangalore’s coolest spots! Whether you're chasing the
+            latest foodie trends or hunting for hidden gems, we serve up a handpicked menu of the city's finest. From trendy cafes
+            to underground events, we dish out what’s happening in the heart of Bangalore. Our blog is your backstage pass, giving
+            you the 411 on everything young, fun, and fresh. Built by Bangalore’s youth, for Bangalore’s youth—because who knows the
+            pulse of the city better than us? Get ready to be Bangalored!
+            </p>
+            <ul class="links">
+                <a href="blogs"><li>Blogs</li></a>
+                <a href="about"><li>About</li></a>
+                <a href="latest"><li>Latest</li></a>
+                <a href="/ricochet_radio"><li>Ricochet Radio</li></a>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container" id="SP">
+        <div class="newsletter">
+            <h1 class="tag">Subscribe to Our Newsletter</h1>
+            <form onsubmit="handleFormSubmit(event)">
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <div class="container" id="pop">
+        <div class="card-container">
+            <h1 class="card-title">Check These Out!</h1>
+            <img src="/static/Images/gif1.gif" alt="" class="card-title" id="c_img">
+            <div class="cards">
+                <div class="card">
+                    <a href="/blogs"><img src="/static/Images/2.png" alt="Card 1">
+                    <div class="card-text">Blogs</div></a>
+                </div>
+                <div class="card">
+                    <a href="/about"><img src="/static/Images/3.png" alt="Card 2">
+                    <div class="card-text">About</div></a>
+                </div>
+                <div class="card">
+                    <a href="/latest"><img src="/static/Images/latest.jpg" alt="Card 3">
+                    <div class="card-text">Latest</div></a>
+                </div>
+                <div class="card">
+                    <a href="/ricochet_radio"><img src="/static/Images/Ricochet Radio.jpg" alt="Card 3">
+                        <div class="card-text">Ricochet Radio</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>

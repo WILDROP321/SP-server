@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest On Sneak Peek</title>
+    <link rel="icon" href="{{ url_for('static', filename='Images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/latest.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Existing CSS here */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="home"><img src="/static/Images/1.png" alt="Logo"></a>
+            <!-- Replace with the path to your logo image -->
+        </div>
+        <div class="navbar-center">
+            <div class="navbar-links">
+                <a href="about">About</a>
+                <a href="home">Home</a>
+                <a href="blogs">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="article">
+        <div class="content">
+
+            <h2>Ricochet Radio</h2>
+            <p id="details">Brought To You By Sneak Peek Bangalore</p>
+            <p>
+            Ricochet Radio is a dynamic one-hour radio show that airs every Friday or Saturday, bringing the heartbeat of
+            Bangalore’s nightlife right to your speakers. Founded by DJ Wildrop, this show is dedicated to showcasing the latest
+            trends in club music, featuring an exciting mix of trending hits, unreleased tracks, and emerging artists. As your go-to
+            destination for discovering new sounds, Ricochet Radio embodies the spirit of the city’s club culture, inviting
+            listeners to immerse themselves in the electrifying world of dance music. Now powered by Sneak Peek Bangalore, the show
+            promises to keep you in the loop with the freshest beats and the ultimate party vibe. Tune in and let the music take you
+            on a journey!
+            </p>
+            <br>
+            <br>
+            <iframe width="100%" height="120"
+                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FRicochetRadio%2Fessentials-by-ricochet-radio-ep003%2F"
+                frameborder="0"></iframe>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1929291029&color=%237a7a7a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div
+                style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/ricochet-radio" title="Ricochet Radio" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Ricochet Radio</a> · <a
+                    href="https://soundcloud.com/ricochet-radio/essentials-by-ricochet-radio-ep003"
+                    title="Essentials By Ricochet Radio | EP:003" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Essentials By Ricochet Radio | EP:003</a></div>
+        </div>
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // GSAP animations
+        gsap.from('.navbar', { opacity: 0, y: -50, duration: 1, ease: 'power3.out' });
+        gsap.from('.container', { opacity: 0, y: 30, duration: 1, delay: 0.5, ease: 'power3.out' });
+        gsap.from('.article', { opacity: 0, y: 30, duration: 1, delay: 1, ease: 'power3.out' });
+        gsap.from('.article img', { opacity: 0, scale: 1.1, duration: 1, delay: 1.5, ease: 'power3.out' });
+    });
+</script>
+
+</html>

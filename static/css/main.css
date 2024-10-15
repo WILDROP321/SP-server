@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@font-face {
+    font-family: 'TAN';
+    src: url('/static/font/TAN-NIMBUS.woff2') format('woff2'),
+        url('/static/font/TAN-NIMBUS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(15, 15, 15);
+    font-family: 'Lexend', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 20px;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#SP {
+    background-image: url("/static/Images/background.png");
+    background-color: #0F0F0F;
+
+}
+
+.newsletter {
+    font-family: "TAN";
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: rgb(15, 15, 15);
+}
+
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #F6E7D8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 80px;
+    font-size: 50px;
+    outline: none;
+    font-family: "TAN";
+}
+
+button {
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 20%;
+    box-sizing: border-box;
+    font-family: "TAN";
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Lexend";
+}
+
+#top {
+    min-height: 80vh;
+    background-color: rgb(15, 15, 15);
+    position: relative;
+}
+
+.intro {
+    text-align: left;
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.intro h1 {
+    font-family: "TAN";
+    font-size: 6rem;
+    width: 80%;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.co {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+    font-family: 'TAN';
+    color: #7b7e81;
+}
+
+.HI {
+    position: absolute;
+    width: 6%;
+    top: 0;
+    left: 72%;
+    transform: translateX(-50%);
+    z-index: 1;
+    /* Ensure the GIF stays on top of the text */
+}
+
+.highlight-border.welcome {
+    position: relative;
+    z-index: 0;
+    /* Ensures the text is behind the GIF */
+}
+
+.gif1 img {
+    width: 5%;
+    animation: slow-spin 10s linear infinite;
+}
+.desc{
+    color: white;
+    font-family: 'Lexend',serif;
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+
+#pop {
+    background-image: url('/static/Images/stripes.png');
+    padding: 20px;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #F6E7D8;
+    font-family: "TAN", serif;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    /* Use flexbox for horizontal alignment */
+    justify-content: left;
+    /* Center items horizontally */
+    list-style: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.links li {
+    font-family: "TAN";
+    font-size: 1.5rem;
+    margin: 0;
+    margin-right: 40px;
+    /* Add some spacing between items */
+}
+
+li{
+    padding: 10px;
+    border-radius: 20%;
+    background-color: #ffb184;
+    cursor: pointer;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+li:hover{
+    background-color: rgb(175, 212, 255);
+}
+
+
+
+#c_img{
+    width: 20%;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 70%;
+    display: block;
+    cursor: pointer;
+}
+
+
+
+.card-text {
+    padding: 15px;
+    font-family: "TAN", serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Slower GIF playback */
+@keyframes slow-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#top {
+    min-height: 80vh;
+    background-color: rgb(15, 15, 15);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* Responsive styles */
+
+@media (max-width: 1620px) {
+    .intro h1 {
+        font-size: 4rem;
+        width: 80%;
+    }
+
+    .desc {
+        width: 80%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="email"],
+    button {
+        font-size: 16px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+    .desc{
+        width: 100%;
+        font-size: 12px;
+    }
+    .gif1 img {
+        width: 10%;
+    }
+
+    .links li {
+        font-family: "TAN";
+        font-size: 1rem;
+        margin: 0;
+        margin-right: 40px;
+        /* Add some spacing between items */
+    }
+
+    li {
+        padding: 10px;
+        border-radius: 20%;
+        background-color: #ffb184;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest On Sneak Peek</title>
+    <link rel="icon" href="{{ url_for('static', filename='Images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/latest.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Existing CSS here */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="home"><img src="/static/Images/1.png" alt="Logo"></a>
+            <!-- Replace with the path to your logo image -->
+        </div>
+        <div class="navbar-center">
+            <div class="navbar-links">
+                <a href="about">About</a>
+                <a href="home">Home</a>
+                <a href="blogs">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Latest On Sneak Peek</h1>
+    </div>
+
+    <section class="article">
+        <div class="content">
+            
+            <h2>Culture In Bangalore</h2>
+            <p id="details">25th August 2024 | 5 min read</p>
+            <p>Bangalore, a city known for its vibrant cultural tapestry, continues to pulse with exciting developments that reflect
+            its dynamic spirit. Recently, the city has seen a surge in cultural activities that cater to diverse tastes and
+            interests, making it an exhilarating place for both locals and visitors.
+            <br>
+            One of the standout events is the Bangalore International Arts Festival, which has become a focal point for showcasing
+            global and local talent. This year’s festival has featured an eclectic mix of performances, from classical music
+            concerts and contemporary dance shows to art exhibitions and theater productions. The festival not only highlights the
+            city’s artistic diversity but also fosters cross-cultural exchanges.</p>
+            <img src="/static/Images/culture.jpg" alt="">
+
+            <h2>Exploring Bangalore’s Latest Cultural Highlights</h2>
+            <p>In the realm of culinary arts, Bangalore’s food scene is flourishing with new trends and hotspots. The recent opening of
+            several high-profile restaurants and cafes has introduced innovative dining experiences. Places like “Urban Spice” are
+            gaining attention for their fusion cuisine, blending traditional Indian flavors with international culinary techniques.
+            These new venues are enhancing the city’s reputation as a food lover’s paradise.
+            <br>
+            Additionally, the city’s street art scene is gaining momentum. Areas like Brigade Road and Indiranagar are now adorned
+            with vibrant murals and installations created by local artists. These street art pieces are not only beautifying the
+            urban landscape but also sparking conversations about social issues and community identity.
+            <br>
+            Moreover, Bangalore’s cultural landscape is also being enriched by a series of workshops and events aimed at promoting
+            traditional crafts and practices. Artisans and craftsmen from various regions are coming together to offer hands-on
+            experiences and demonstrations, giving participants a chance to connect with India’s rich heritage.
+            <br>
+            In summary, Bangalore’s cultural scene is thriving with a blend of art, food, and heritage, offering a rich array of
+            experiences for all who wish to engage with the city’s vibrant spirit.
+        </p>
+
+        </div>
+    </section>
+</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // GSAP animations
+            gsap.from('.navbar', { opacity: 0, y: -50, duration: 1, ease: 'power3.out' });
+            gsap.from('.container', { opacity: 0, y: 30, duration: 1, delay: 0.5, ease: 'power3.out' });
+            gsap.from('.article', { opacity: 0, y: 30, duration: 1, delay: 1, ease: 'power3.out' });
+            gsap.from('.article img', { opacity: 0, scale: 1.1, duration: 1, delay: 1.5, ease: 'power3.out' });
+        });
+    </script>
+</html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'TAN';
+    src: url('/static/font/TAN-NIMBUS.woff2') format('woff2'),
+        url('/static/font/TAN-NIMBUS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General styles for the blog page */
+body {
+    background-color: rgb(15, 15, 15);
+    color: #F6E7D8;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "TAN";
+    position: relative;
+}
+
+.navbar-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #F6E7D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.navbar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #F6E7D8;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar-links a:hover {
+    color: #ffffff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar-links {
+        gap: 2rem;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .navbar-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+    }
+}
+
+h1 {
+    font-family: "TAN";
+    font-size: 5rem;
+}
+
+.container{
+    padding: 20px;
+}
+
+
+.article {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content {
+    border-left: 2px solid white;
+    border-radius: 10px;
+    width: 80%;
+    /* Adjust width as needed */
+    max-width: 800px;
+    /* Optional: Limit maximum width */
+    padding: 20px;
+    color: #e9d6c4;
+}
+
+.content h2 {
+    font-family: "TAN";
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-family: 'Lexend', serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e9d8c7;
+}
+
+.content img {
+    display: block;
+    /* Remove inline space */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    max-width: 100%;
+    /* Make sure the image is responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+#details{
+    color: #6c6c6e;
+    
+}

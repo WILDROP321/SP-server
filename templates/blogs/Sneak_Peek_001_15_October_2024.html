@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneak Peek - 001 15_October_2024 </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'TAN';
+    src: url('/static/font/TAN-NIMBUS.woff2') format('woff2'),
+        url('/static/font/TAN-NIMBUS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General styles for the blog page */
+body {
+    background-color: rgb(15, 15, 15);
+    color: #F6E7D8;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "TAN";
+    position: relative;
+}
+
+.navbar-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #F6E7D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.navbar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #F6E7D8;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar-links a:hover {
+    color: #ffffff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar-links {
+            gap: 2rem;
+        }
+    .navbar-links a{
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .navbar-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+    }
+}
+
+h1 {
+    font-family: "TAN";
+    font-size: 5rem;
+}
+
+.container{
+    padding: 20px;
+}
+
+
+.article {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content {
+    border-left: 2px solid white;
+    border-radius: 10px;
+    width: 80%;
+    /* Adjust width as needed */
+    max-width: 800px;
+    /* Optional: Limit maximum width */
+    padding: 20px;
+    color: #e9d6c4;
+}
+
+.content h2 {
+    font-family: "TAN";
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-family: 'Lexend', serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e9d8c7;
+}
+
+.content img {
+    display: block;
+    /* Remove inline space */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    max-width: 100%;
+    /* Make sure the image is responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    text-decoration: none;
+    background-color: rgb(74, 185, 74);
+    font-family: "TAN";
+    padding: 5px;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#details{
+    color: #6c6c6e;
+    
+}
+
+#sponsored{
+
+    color: orangered;
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/home"><img src="/static/Images/1.png" alt="Logo"></a>
+            <!-- Replace with the path to your logo image -->
+        </div>
+        <div class="navbar-center">
+            <div class="navbar-links">
+                <a href="/about">About</a>
+                <a href="/home">Home</a>
+                <a href="/blogs">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="article">
+        <div class="content">
+
+            <div class="section">
+                <p id="details">FEATURED</p>
+                <img src="https://b.zmtcdn.com/data/pictures/3/20530123/613963022e9fee716d42c5423c6357eb.jpeg" alt="">
+                <h2>Skyline Rooftop Bar & Kitchen</h2>
+                <p id="details">4.3</p>
+                <p>Indulge in culinary delights and breathtaking city views at Skyline Rooftop Bar & Kitchen. Perched atop a chic hotel, this rooftop oasis offers a tantalizing menu of modern American cuisine, crafted with fresh, seasonal ingredients. Savor delectable dishes while sipping on handcrafted cocktails as you soak in panoramic vistas of the city skyline. With a 4.3-star rating, Skyline Rooftop Bar & Kitchen promises an unforgettable dining experience that will leave you craving more.</p>
+                <a href="https://www.zomato.com/bangalore/skyline-rooftop-bar-kitchen-marathahalli-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+
+            <!-- Trending Section -->
+            <div class="section">
+                <p id="details">TRENDING</p>
+                <img src="https://b.zmtcdn.com/data/pictures/6/18573016/4d5531deb04e87da30d6aa461ffe5ac2.jpg" alt="">
+                <h2>Nakkshatra by Nagarjuna</h2>
+                <p id="details">4.6</p>
+                <p>Nestled in the heart of Bangalore, Nakkshatra by Nagarjuna is a culinary haven that tantalizes taste buds with its exquisite South Indian cuisine. The ambiance is elegant and inviting, adorned with intricate carvings and traditional motifs. The menu boasts a symphony of flavors, from classic dishes to innovative creations. Each dish is meticulously crafted using fresh, locally sourced ingredients, ensuring an authentic and unforgettable dining experience. With a rating of 4.6, Nakkshatra by Nagarjuna is a must-visit destination for discerning foodies seeking a taste of South India's culinary heritage.</p>
+                <a href="https://www.zomato.com/bangalore/nakkshatra-by-nagarjuna-marathahalli-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+        
+            <!-- PARTY -->
+            <div class="section">
+                <p ><a href="/ricochet_radio" id="sponsored">RICOCHET RADIO'S FEATURED PARTY</a></p>
+                <img src="https://b.zmtcdn.com/data/zomaland/2d95e146a705398e7a221000d7f900b31728538325.png" alt="">
+                <h2>One8 Commune Sunsets X SoMAD - RAJA Live</h2>
+                <p id="details">COST: 399</p>
+                <p>Commune Sunsets is a stop Solution for all your music Exploration needs, Where SoMAD With its immersive expertise in Curation and Event production brings you an unparalleled experience with the city's best Sound Audio and Visual appeal, come be a part of the commune and socialise with the city's finest creators, music enthusiasts & the Glam! </p>
+                <a href="https://www.zomato.com/events/one8-commune-sunsets-x-somad-raja-live-bengaluru-et52315"><button>Visit</button></a>
+            </div>
+
+
+            <!-- New In Town Section -->
+            <div class="section">
+                <p id="details">NEW IN TOWN</p>
+                <img src="https://b.zmtcdn.com/data/pictures/4/21435634/21e38072ff4c2b490a9d76434950d660.jpg" alt="">
+                <h2>Brewing Untold Stories</h2>
+                <p id="details">New</p>
+                <p>Brewing Untold Stories, a newly opened restaurant in Bangalore, invites you to savor a culinary journey that tantalizes your taste buds and captivates your imagination. Immerse yourself in a cozy ambiance where the aroma of freshly brewed coffee mingles with the tantalizing scents of global cuisine. Each dish is a masterpiece, crafted with passion and presented with artistry, promising an unforgettable dining experience. Come, let us brew untold stories together, one sip and one bite at a time.</p>
+                <a href="https://www.zomato.com/bangalore/brewing-untold-stories-basavanagudi-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+        
+            <!-- Date Section -->
+            <div class="section">
+                <p id="details">DATE NIGHT</p>
+                <img src="https://b.zmtcdn.com/data/pictures/4/20499504/157afb3f934cb52c86178fb72ce56c76.jpg" alt="">
+                <h2>Foo Brigade Road</h2>
+                <p id="details">4.7</p>
+                <p>Foo Brigade Road is a romantic restaurant with a cozy ambiance and a menu that features a variety of dishes made with fresh, local ingredients. The restaurant has a 4.7-star rating on Google, and reviewers rave about the food, service, and atmosphere. Foo Brigade Road is the perfect place for a special occasion or a romantic evening out.</p>
+                <a href="https://www.zomato.com/bangalore/foo-brigade-road-brigade-road-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+        
+            <!-- Brew Section -->
+            <div class="section">
+                <p id="details">WHAT'S BREWING?</p>
+                <img src="https://b.zmtcdn.com/data/pictures/0/18492910/40095cbc32ba757bb53dc639400c10f3.jpg" alt="">
+                <h2>Red Rhino</h2>
+                <p id="details">4.4</p>
+                <p>Nestled in the heart of Bangalore, Red Rhino is a microbrewery renowned for its exceptional craft beers. With a rating of 4.4, it boasts a cozy ambiance, friendly staff, and a wide selection of handcrafted brews. From crisp lagers to hoppy IPAs and rich stouts, Red Rhino caters to every beer enthusiast's palate. Its commitment to quality and innovation has earned it a loyal following among Bangalore's beer lovers.</p>
+                <a href="https://www.zomato.com/bangalore/red-rhino-whitefield-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+        
+
+            <!-- featured event -->
+            <div class="section">
+                <p>EVENT in BANGALORE</p>
+                <img src="https://b.zmtcdn.com/data/zomaland/2c93c8638d243698aaac4f30920bccca1726904190.png" alt="">
+                <h2>Pet Fed Bengaluru 2024</h2>
+                <p id="details">COST: 699</p>
+                <p>Bengaluru, brace yourselves because Pet Fed is Back and it's bigger, better, and greener than ever! #PetFedIndiaisBack. This year, we're not just celebrating our returnâ€”we're celebrating 10 incredible years of Pet Fed!. Join us at Jayamahal Palace on 23rd & 24th November 2024 for two days of non-stop love and fun with your fur babies.</p>
+                <a href="https://www.zomato.com/events/pet-fed-bengaluru-2024-bengaluru-et51736"><button>Visit</button></a>
+            </div>
+
+
+
+            <!-- Cafe Section -->
+            <div class="section">
+                <p id="details">CAFE</p>
+                <img src="https://b.zmtcdn.com/data/pictures/2/21120792/8ec65f79305520a506be1f438f7b388c.jpg" alt="">
+                <h2>Radio Bar</h2>
+                <p id="details">New</p>
+                <p>Radio Bar is a cozy and inviting cafe with a warm and friendly atmosphere. The cafe is decorated with vintage radios and music memorabilia, creating a unique and nostalgic ambiance. The menu features a variety of delicious coffee drinks, teas, and pastries, as well as a selection of light bites and sandwiches. The staff is friendly and attentive, and the prices are reasonable. Overall, Radio Bar is a great place to relax and enjoy a cup of coffee or tea in a comfortable and welcoming environment.</p>
+                <a href="https://www.zomato.com/bangalore/radio-bar-bellandur-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+        
+            <!-- Pub and Bar Section -->
+            <div class="section">
+                <p id="details">PUB & BAR</p>
+                <img src="https://b.zmtcdn.com/data/pictures/8/20329318/bd9cf70c10c0468bccd73db98b87301a.jpg" alt="">
+                <h2>Parka Resto Bar</h2>
+                <p id="details">4.3</p>
+                <p>Escape to Parka Resto Bar, a cozy haven where culinary delights and spirited libations intertwine. Immerse yourself in a warm and inviting ambiance, adorned with rustic charm and modern touches. Our menu tantalizes with a symphony of flavors, from classic pub fare to innovative creations. Sip on expertly crafted cocktails or savor a refreshing pint while basking in the convivial atmosphere. With a 4.3-star rating, Parka Resto Bar promises an unforgettable experience that will leave you yearning for more.</p>
+                <a href="https://www.zomato.com/bangalore/parka-resto-bar-kalyan-nagar-bangalore?zrp_bid=0&zrp_pid=14"><button>Visit</button></a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // GSAP animations
+            gsap.from('.navbar', { opacity: 0, y: -50, duration: 1, ease: 'power3.out' });
+            gsap.from('.section', { opacity: 0, y: 30, duration: 1, delay: 0.5, ease: 'power3.out' });
+            gsap.from('.article', { opacity: 0, y: 30, duration: 1, delay: 1, ease: 'power3.out' });
+            gsap.from('.article img', { opacity: 0, scale: 1.1, duration: 1, delay: 1.5, ease: 'power3.out' });
+        });
+
+        // Button hover animation
+        gsap.fromTo("button",
+            { scale: 1 },
+            { scale: 1.1, duration: 0.8, repeat: -1, yoyo: true, ease: "power1.inOut" }
+        );
+    </script>
+</html>

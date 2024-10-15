@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+    font-family: 'TAN';
+    src: url('/static/font/TAN-NIMBUS.woff2') format('woff2'),
+        url('/static/font/TAN-NIMBUS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General styles for the blog page */
+body {
+    background-color: rgb(15, 15, 15);
+    color: #F6E7D8;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "TAN";
+    position: relative;
+}
+
+.navbar-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #F6E7D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.navbar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #F6E7D8;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar-links a:hover {
+    color: #ffffff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar-links {
+            gap: 2rem;
+        }
+    .navbar-links a{
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .navbar-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+    }
+}
+
+
+.card {
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    width: 250px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "TAN";
+    background-color: #f5af69;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f1d8b8;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+h3{
+    font-size: 1rem;
+}
+
+.container{
+    padding: 20px;
+}
+
+h1 {
+    font-family: "TAN";
+    font-size: 5rem;
+}
+
+#error{
+    text-align: center;
+    font-size: 10rem;
+}
+
+#aha{
+    color: rgb(159, 231, 159);
+    font-family: "TAN";
+    text-align: center;
+    font-size: 3rem;
+}
