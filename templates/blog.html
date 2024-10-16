@@ -30,14 +30,15 @@
 
 
     <div class="card-container">
-        {% for post in blog_posts %}
+        {% for post, thumbnail in posts_with_thumbnails.items() %}
         <a href="{{ url_for('render_blog', filename=post) }}" class="card">
-            <img src="/static/Images/2.png" alt="">
+            <img src="{{ url_for('static', filename='Images/Thumbnail/' + thumbnail) }}" alt="">
             <h3>{{ post.replace('_', ' ').rstrip('.html') }}</h3>
             <p>Click to read more</p>
         </a>
         {% endfor %}
     </div>
+
 
 
 </body>

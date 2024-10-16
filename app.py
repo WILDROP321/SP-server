@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import os
+import random
 
 app = Flask(__name__)
 
@@ -34,14 +35,21 @@ def latest():
 @app.route('/blog')
 @app.route('/blogs')
 def blog():
-    # Specify the folder path
+    THUMBNAIL_FOLDER = 'static/Images/Thumbnail'
+    # Specify the folder path for blog posts
     folder_path = 'templates/blogs'
-
     # Get a list of all files in the 'templates/blogs' folder
     blog_posts = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
-    print(blog_posts)
-    # Pass the blog_posts list to the template
-    return render_template('blog.html', blog_posts=blog_posts)
+    # Get a list of thumbnail images from the thumbnail folder
+    thumbnails = os.listdir(THUMBNAIL_FOLDER)
+
+    # Create a dictionary of posts with random thumbnails
+    posts_with_thumbnails = {}
+    for post in blog_posts:
+        random_thumbnail = random.choice(thumbnails)
+        posts_with_thumbnails[post] = random_thumbnail
+
+    return render_template('blog.html', posts_with_thumbnails=posts_with_thumbnails)
 
 @app.route('/blog/<filename>')
 def render_blog(filename):
